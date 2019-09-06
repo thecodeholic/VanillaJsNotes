@@ -22,3 +22,15 @@ const noteManager = new NoteManager({
     },
   ]
 });
+
+noteManager.onNoteChange = (note) => {
+  console.log(note);
+};
+
+const newNoteBtn = document.querySelector('.new-note-btn');
+newNoteBtn.onclick = () => {
+  noteManager.prependNote({
+    title: '',
+    body: ''
+  })
+};
