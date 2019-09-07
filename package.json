@@ -1,15 +1,15 @@
 {
-  "name": "webpack-babel-demo",
+  "name": "@thecodeholic/plainjs-notes",
   "version": "1.0.0",
-  "description": "",
+  "description": "Notes app using vanilla javascript",
   "main": "index.js",
   "scripts": {
     "build": "npx webpack --config webpack.config.prod.js --mode=production",
     "watch": "npx webpack --watch",
     "start": "webpack-dev-server"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Zura Sekhniashvili <zurasekhniashvili@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
@@ -28,5 +28,14 @@
     "webpack-cli": "^3.2.0",
     "webpack-dev-server": "^3.1.14",
     "tar": ">=2.2.2"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecodeholic/VanillaJsNotes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thecodeholic/VanillaJsNotes/issues"
+  },
+  "homepage": "https://github.com/thecodeholic/VanillaJsNotes#readme"
 }

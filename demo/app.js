@@ -28,10 +28,10 @@ const noteManager = new NoteManager({
 });
 
 noteManager.onNoteAdd = (note) => {
-  console.log("Note added", note);
+  console.log("Note added ", note);
 };
 noteManager.onNoteChange = (note) => {
-  console.log("Note changed", note);
+  console.log("Note changed ", note);
 };
 noteManager.onNoteRemove = (note) => {
   console.log("Note removed ", note);

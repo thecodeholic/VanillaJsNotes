@@ -9,7 +9,7 @@ module.exports = function (env, argv) {
   return {
     mode: 'production',
     entry: [
-      './src/app.js'
+      './src/NoteManager.js'
     ],
     optimization: {
       minimizer: [
@@ -19,9 +19,6 @@ module.exports = function (env, argv) {
     ,
     plugins: [
       new CleanWebpackPlugin(['dist']),
-      new HtmlWebpackPlugin({
-        template: path.resolve('./src/index.html')
-      }),
       new MiniCssExtractPlugin({
         filename: "[name].css",
         chunkFilename: "[id].css"
@@ -47,28 +44,7 @@ module.exports = function (env, argv) {
               presets: ['@babel/preset-env']
             }
           }
-        },
-        {
-          test: /\.(woff(2)?|ttf|otf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]',
-                outputPath: 'fonts/'
-              }
-            }
-          ]
-        },
-        {
-          test: /\.html$/,
-          use: {
-            loader: 'html-loader',
-            options: {
-              attrs: [':src', ':href']
-            }
-          }
-        },
+        }
       ]
     }
   };
