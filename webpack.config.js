@@ -27,7 +27,6 @@ module.exports = function(){
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Webpack starter project',
         template: path.resolve('./src/index.html')
       }),
       new webpack.HotModuleReplacementPlugin()
@@ -51,30 +50,6 @@ module.exports = function(){
               presets: ['@babel/preset-env']
             }
           }
-        },
-        {
-          test: /\.(pdf|doc|docx|xls|xlsx|txt|csv|tsv)$/,
-          use: [
-            {
-              loader: "file-loader",
-              options: {
-                outputPath: './files',
-                name: "[name].[ext]",
-              },
-            }
-          ]
-        },
-        {
-          test: /\.(jpg|jpeg|gif|png|svg|webp)$/,
-          use: [
-            {
-              loader: "file-loader",
-              options: {
-                outputPath: './images',
-                name: "[name].[ext]",
-              },
-            },
-          ]
         },
         {
           test: /\.(woff(2)?|ttf|otf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
