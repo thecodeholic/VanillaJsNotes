@@ -6,7 +6,7 @@ module.exports = function(){
   return {
     mode: 'development',
     entry: [
-      './src/app.js'
+      './demo/app.js'
     ],
     watch: true,
     watchOptions: {
@@ -27,7 +27,7 @@ module.exports = function(){
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve('./src/index.html')
+        template: path.resolve('./demo/index.html')
       }),
       new webpack.HotModuleReplacementPlugin()
     ],

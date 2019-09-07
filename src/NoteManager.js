@@ -1,13 +1,16 @@
+import './NoteManager.scss';
 import Note from './Note';
 
 export default class NoteManager {
   constructor({el, notes}) {
     this.el = el;
+    this.el.className = 'tc-notes-wrapper';
     this.notesEl = null;
     this.notes = notes.map(note => new Note(note, this));
 
     this.onNoteChange = () => {
     };
+    this.createNewNoteButton();
     this.createNotesWrapper();
     this.renderNotes();
   }
@@ -25,6 +28,10 @@ export default class NoteManager {
   removeNote(note) {
     this.notes.splice(this.notes.indexOf(note), 1);
     this.renderNotes();
+  }
+
+  createNewNoteButton(){
+
   }
 
   createNotesWrapper() {

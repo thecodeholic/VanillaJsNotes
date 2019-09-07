@@ -1,5 +1,5 @@
-import './scss/style.scss';
-import NoteManager from './NoteManager';
+import './style.scss';
+import NoteManager from '../src/NoteManager';
 
 const noteManager = new NoteManager({
   el: document.getElementById('notesWrapper'),
